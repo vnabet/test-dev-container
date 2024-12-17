@@ -21,7 +21,7 @@
 	 "forwardPorts": [5001],
 	 "portsAttributes": {
 			"5001": {
-				"protocol": "https"
+				"protocol": "http"
 			}
 	 },
 
