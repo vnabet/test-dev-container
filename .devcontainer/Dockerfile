@@ -11,5 +11,6 @@ RUN bash ./installSQLtools.sh \
 
 # [Optional] Uncomment this line to install global node packages.
 RUN su vscode -c "source /usr/local/share/nvm/nvm.sh && nvm install --lts && nvm use --lts && npm install -g pnpm typescript" 2>&1
-RUN su vscode -c "dotnet workload update"
+USER root
+RUN dotnet workload update
 # RUN su vscode -c "source /usr/local/share/nvm/nvm.sh && npm install -g <your-package-here>" 2>&1
