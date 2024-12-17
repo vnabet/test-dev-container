@@ -1,0 +1,13 @@
+{
+  "name": "todoapi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "restore": "dotnet restore",
+    "build": "dotnet build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
