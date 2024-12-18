@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -7,7 +7,7 @@ namespace TodoApi.Controllers;
 
 public class Test {
     public int id {get; set;}
-    public string name {get; set;}
+    public required string name {get; set;}
 }
 
 [ApiController]
