@@ -1,7 +1,6 @@
 IF NOT EXISTS (SELECT * FROM sys.databases WHERE name = 'VincentDB')
 BEGIN
     CREATE DATABASE VincentDB;
-    GO
 
     USE VincentDB;
 
@@ -15,5 +14,5 @@ BEGIN
 
     INSERT INTO table_test (name)
     VALUES ('tutu'), ('tata'), ('toto'), ('titi');
-    GO
 END
+GO
