@@ -1,21 +1,19 @@
-CREATE DATABASE VincentDB;
-GO
+IF NOT EXISTS (SELECT * FROM sys.databases WHERE name = 'VincentDB')
+BEGIN
+    CREATE DATABASE VincentDB;
+    GO
 
-create table table_test
-(
-    id   int identity
-        constraint table_test_pk
-            primary key,
-    name varchar(255) not null
-)
+    USE VincentDB;
 
-use VincentDB
-insert into table_test (name)
-values ('tutu');
-insert into table_test (name)
-values ('tata');
-insert into table_test (name)
-values ('toto');
-insert into table_test (name)
-values ('titi');
-go
+    CREATE TABLE table_test
+    (
+        id INT IDENTITY
+            CONSTRAINT table_test_pk
+                PRIMARY KEY,
+        name VARCHAR(255) NOT NULL
+    );
+
+    INSERT INTO table_test (name)
+    VALUES ('tutu'), ('tata'), ('toto'), ('titi');
+    GO
+END
